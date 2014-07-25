@@ -37,7 +37,7 @@ The path to the directory is relative to the project directory (and where the ``
 Bower can only install into one location, so if you want separate installations within one project -- for example ```js/libs``` (for production libraries) and ```test/libs``` (for testing libraries) -- you need to create a separate ```.bowerrc``` file in the second directory and install bower components from inside that directory (PITA).
 
 ####Bower.json file####
-Bower.json file contains information about your project and, most importantly, a list of dependencies for the project -- what bower packages the project needs.
+Bower.json file contains information about your project and, most importantly, a list of dependencies for the project -- what bower packages the project needs. ([Basic format for bower.json file](#Basic-Structure-of-bower.json-File)))
 
 ```bower init``` <br>
 Create new ```bower.json``` file in the current directory. This is interative -- asks questions about project and builds ```bower.json``` file for you.
