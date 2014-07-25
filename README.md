@@ -40,19 +40,32 @@ Bower can only install into one location, so if you want separate installations 
 Bower.json file contains information about your project and, most importantly, a list of dependencies for the project -- what bower packages the project needs. ([Basic format for bower.json file](#basic-structure-of-bowerjson-file)))
 
 ```bower init``` <br>
-Create new ```bower.json``` file in the current directory. This is interative -- asks questions about project and builds ```bower.json``` file for you.
+Create new ```bower.json``` file in the current directory. This is interative -- asks questions about project and builds ```bower.json``` file for you. 
 
-####Updating Packages
+```bower install <package-name> --save``` <br>
+Install bower package AND add to list of dependencies in ```bower.json```
+
+
+##Updating and Removing Packages
 ```bower list``` <br>
 List local packages for project and possible updates
- 
+
 ```bower update``` <br>
 Updates all installed packages in project directory to version specified in bower.json.
+ 
+```bower update <package-name>``` <br>
+Updates package to version specified in bower.json.
 
 ```bower install <package-name>``` <br>
-Updates just listed package(s) to latest version.
+Updates listed package(s) to latest version.
 
-###Basic Structure of bower.json File
+```bower uninstall <package-name>``` <br>
+Remove bower package files from project
+
+```bower uninstall <package-name> --save``` <br>
+Remove bower package files from project and from list of dependencies in bower.json file.
+
+##Basic Structure of bower.json File
 ```javascript
 {
   "name": "My Project",
