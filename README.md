@@ -1,7 +1,7 @@
 Bower Cheat Sheet
 =======================
 
-##Installation
+##Installing Bower
 * node.js: [download](http://nodejs.org/download/)
 * Requires Git
   * Mac: installed
