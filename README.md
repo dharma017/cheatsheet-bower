@@ -21,7 +21,7 @@ Bower Cheat Sheet
 Install particular version of package. For example: ```bower install jquery#1.11```
 
 ```bower install <package1-name> <package2-name> <package3-name> <package4-name>``` <br>
-Install multiple packages at once
+Install multiple packages at once. For example: ```bower install jquery angular bootstrap```
 
 ####Specifying Where Bower Installs Packages
 Normally, bower install packages in your project's root directory in a folder named ```bowser_components```. If you want to change where the packages are installed -- for example, in a ```js``` or ```js/libs``` folder, you need to create a file named ```.bowerrc``` in the project directory. That file should have a simple JSON string formatted like this:
@@ -34,4 +34,43 @@ Normally, bower install packages in your project's root directory in a folder na
 
 The path to the directory is relative to the project directory (and where the ```.bowerrc``` file is located.)
 
-Bower can only install into one location, so if you want separate installations within one project -- for example ```js/libs``` (for production libraries) and ```test/libs``` (for testing libraries) -- you need to 
+Bower can only install into one location, so if you want separate installations within one project -- for example ```js/libs``` (for production libraries) and ```test/libs``` (for testing libraries) -- you need to create a separate ```.bowerrc``` file in the second directory and install bower components from inside that directory (PITA).
+
+####Bower.json file####
+Bower.json file contains information about your project and, most importantly, a list of dependencies for the project -- what bower packages the project needs.
+
+```bower init``` <br>
+Create new ```bower.json``` file in the current directory. This is interative -- asks questions about project and builds ```bower.json``` file for you.
+
+####Updating Packages
+```bower list``` <br>
+List local packages for project and possible updates
+ 
+```bower update``` <br>
+Updates all installed packages in project directory to version specified in bower.json.
+
+```bower install <package-name>``` <br>
+Updates just listed package(s) to latest version.
+
+###Basic Structure of bower.json File
+```javascript
+{
+  "name": "My Project",
+  "version": "0.0.1",
+  "authors": [
+    "Dave McFarland <dave@sawmac.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jqueryui": "~1.11.0"
+  }
+}
+```
