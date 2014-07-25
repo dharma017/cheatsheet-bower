@@ -29,7 +29,8 @@ Normally, bower install packages in your project's root directory in a folder na
 ```javascript
 {
      "directory" : "js/lib"
-}``` 
+}
+``` 
 
 The path to the directory is relative to the project directory (and where the ```.bowerrc``` file is located.)
 
