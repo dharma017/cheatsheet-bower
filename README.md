@@ -84,6 +84,12 @@ Remove bower package files from project and from list of dependencies in bower.j
   "dependencies": {
     "jquery": "~2.1.1",
     "jqueryui": "~1.11.0"
+  },
+   "install" : {
+    "path" : {
+      "css": "src/css",
+      "js": "src/js"
+    } 
   }
 }
 ```
